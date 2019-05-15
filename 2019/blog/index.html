@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="董先森">
+  <meta name="description" content="董先森 的个人博客站点">
+  <meta name="keywords" content="董先森，个人博客,技术交流，经验分享，人生总结">
+  
+  <link rel="prev" href="https://dwg678.github.io/2014/creating-a-new-theme/" />
+  
+  <link rel="canonical" href="https://dwg678.github.io/2019/blog/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Windows下搭建Hugo博客 | 董先森博客
+       
+  </title>
+  <meta name="title" content="Windows下搭建Hugo博客 | 董先森博客">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/dwg678.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "Windows下搭建Hugo博客",
+    "headline" : "Windows下搭建Hugo博客",
+    "description" : "★内容参考B站Up主CodeSheep，视频地址：https:\/\/www.bilibili.com\/video\/av51574688 我整理了Windows下的操作方法，如下：\n1：在https:\/\/github.com\/gohugoio\/hugo\/releases地址下找到Windows压缩文件下载，如下图你可以下载32或者64位的\n!|yukundio9527|(https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513103543080-42645007.png )\n2:如何看hugo安装成没成功，打开cmd，输入hugo version，如图所示，则代表安装成功 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513104311337-59247151.png)\n3：安装成功后，用Hugo还创建自己的博客，命令如下图所示：hugo new site myblog 注：myblog为文件夹名字名字 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513104400669-308164512.png)\n3：输入dir，能看到文件夹已经创建好了，如图 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513104746195-1847106720.png)\n4：我们进入到myblog里面，可以看到如下内容 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513105110070-410624344.png)\n5:下载设置主题，去https:\/\/themes.gohugo.io\/选择自己喜欢的主题进行下载，如图\n!|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513105411063-698289161.png)\n6：这里我选择m10c，以他为例子，具体操作如图显示。注：前提一定要下git并且配置好！\n!|yukundio9527|(https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513105733247-1170336546.png )\n7：主题下载成功如图 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513110131643-1221757335.png)\n8：去themes下，看看有没有，如图有啦 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513110358274-876342732.png)\n9：启动博客命令，输入 hugo server -t m10c \x26ndash;buildDrafts !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513110652873-1708790104.png)\n10：如图所示，出来了 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513110844450-463620106.png)\n11：接下来就是创建文章，我们继续在根目录下创建，如图 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513111404737-367248422.png)\n12：那怎么写呢，推荐用VS Code来写，写完后记得保存！如图 !|yukundio9527|(https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513113621727-277941586.png)\n13：然后再根目录下输入指令 hugo server -t m10c \x26ndash;buildDrafts，如图 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513112328506-2027514860.png)\n14：再打开http:\/\/localhost:1313，如图 !|yukundio9527|( https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513113807091-839861697.png)\n15：把博客部署的远端github上，首先创建仓库，如图 !|yukundio9527|(https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513115447195-446798861.png )\n16：仓库已经有了，但是个空仓库，接下来敲命令hugo \x26ndash;theme=m10c \x26ndash;baseUrl=\x26ldquo;地址\x26rdquo; \x26ndash;buildDrafts，如图 !|yukundio9527|(https:\/\/img2018.cnblogs.com\/blog\/1033328\/201905\/1033328-20190513115904234-1855386864.png )",
+    "inLanguage" : "en-us",
+    "author" : "董先森",
+    "creator" : "董先森",
+    "publisher": "董先森",
+    "accountablePerson" : "董先森",
+    "copyrightHolder" : "董先森",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-05-15 14:07:04 \x2b0800 CST",
+    "dateModified" : "2019-05-15 14:07:04 \x2b0800 CST",
+    "url" : "https:\/\/dwg678.github.io\/2019\/blog\/",
+    "wordCount" : "96",
+    "keywords" : [  "董先森博客"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://dwg678.github.io">董先森博客</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://dwg678.github.io">董先森博客</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Windows下搭建Hugo博客</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://dwg678.github.io" rel="author">董先森</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-05-15 itemprop="datePublished">May 15, 2019</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>★内容参考B站Up主CodeSheep，视频地址：<a href="https://www.bilibili.com/video/av51574688" rel="nofollow noreferrer" target="_blank">https://www.bilibili.com/video/av51574688</a>
+我整理了Windows下的操作方法，如下：</p>
+
+<p>1：在<a href="https://github.com/gohugoio/hugo/releases地址下找到Windows压缩文件下载，如下图你可以下载32或者64位的" rel="nofollow noreferrer" target="_blank">https://github.com/gohugoio/hugo/releases地址下找到Windows压缩文件下载，如下图你可以下载32或者64位的</a></p>
+
+<p>!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png</a> )</p>
+
+<p>2:如何看hugo安装成没成功，打开cmd，输入hugo version，如图所示，则代表安装成功
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png</a>)</p>
+
+<p>3：安装成功后，用Hugo还创建自己的博客，命令如下图所示：hugo new site myblog  注：myblog为文件夹名字名字
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png</a>)</p>
+
+<p>3：输入dir，能看到文件夹已经创建好了，如图
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png</a>)</p>
+
+<p>4：我们进入到myblog里面，可以看到如下内容
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png</a>)</p>
+
+<p>5:下载设置主题，去<a href="https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图" rel="nofollow noreferrer" target="_blank">https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图</a></p>
+
+<p>!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png</a>)</p>
+
+<p>6：这里我选择m10c，以他为例子，具体操作如图显示。注：前提一定要下git并且配置好！</p>
+
+<p>!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png</a> )</p>
+
+<p>7：主题下载成功如图
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png</a>)</p>
+
+<p>8：去themes下，看看有没有，如图有啦
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png</a>)</p>
+
+<p>9：启动博客命令，输入 hugo server -t m10c &ndash;buildDrafts
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png</a>)</p>
+
+<p>10：如图所示，出来了
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png</a>)</p>
+
+<p>11：接下来就是创建文章，我们继续在根目录下创建，如图
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png</a>)</p>
+
+<p>12：那怎么写呢，推荐用VS Code来写，写完后记得保存！如图
+!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png</a>)</p>
+
+<p>13：然后再根目录下输入指令 hugo server -t m10c &ndash;buildDrafts，如图
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png</a>)</p>
+
+<p>14：再打开<a href="http://localhost:1313，如图" rel="nofollow noreferrer" target="_blank">http://localhost:1313，如图</a>
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png</a>)</p>
+
+<p>15：把博客部署的远端github上，首先创建仓库，如图
+!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png</a> )</p>
+
+<p>16：仓库已经有了，但是个空仓库，接下来敲命令hugo &ndash;theme=m10c &ndash;baseUrl=&ldquo;地址&rdquo; &ndash;buildDrafts，如图
+!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png</a> )</p>
+
+<p>17：成功后会在根目录下生成一个public文件，如图
+!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513120058123-157282331.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513120058123-157282331.png</a> )</p>
+
+<p>18：把这个public传到github仓库上，首先进入到public，如图所示，已经把文件加到了仓库里面
+!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131616264-757767342.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131616264-757767342.png</a> )</p>
+
+<p>17：要把本地public和远程github进行关联
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131952890-741412180.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131952890-741412180.png</a>)</p>
+
+<p>18：然后还有个push命令，git push -u origin master，期间会让你输入账号密码，输入即可，如图完成
+!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132636901-1344078191.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132636901-1344078191.png</a> )</p>
+
+<p>19：我们刷新下github页面，就会看到文件已经传上来了，如图
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132907679-993295920.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132907679-993295920.png</a>)</p>
+
+<p>20：最后，我们拿仓库地址访问下，成功，博客已经部署到远端！如图。
+!|yukundio9527|( <a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133102657-1278645314.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133102657-1278645314.png</a>)</p>
+
+<p>21：里面的内容也是可以访问的，如图
+!|yukundio9527|(<a href="https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133221455-1454359954.png" rel="nofollow noreferrer" target="_blank">https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133221455-1454359954.png</a> )</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>董先森 </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://dwg678.github.io/2019/blog/>https://dwg678.github.io/2019/blog/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://dwg678.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://dwg678.github.io/2014/creating-a-new-theme/" class="prev" rel="prev" title="Creating a New Theme"><i class="iconfont icon-left"></i>&nbsp;Creating a New Theme</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2018 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://dwg678.github.io">董先森</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

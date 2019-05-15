@@ -2164,24 +2164,20 @@ so, such as in this example:&lt;/p&gt;
     </item>
     
     <item>
-      <title>About Hugo</title>
+      <title>about</title>
       <link>https://dwg678.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://dwg678.github.io/about/</guid>
-      <description>&lt;p&gt;Hugo is the &lt;strong&gt;world’s fastest framework for building websites&lt;/strong&gt;. It is written in Go.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;关于董先森&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+&lt;p&gt;四川巴中人、90后标准屌丝。 2017年，一时脑抽筋。在成都的某所民办大专里学习了注定成为屌丝的专业——软件技术。:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/russross/blackfriday&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/russross/blackfriday&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/alecthomas/chroma&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/muesli/smartcrop&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关于博客&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;本人不精通吃喝嫖赌，不懂得生活，就是喜欢乱折腾点东西，但总是折腾得半桶水。 脑子有限，仅能把一些信息放在这里借宿。&lt;/p&gt;
+
+&lt;p&gt;Learn more  on &lt;a href=&#34;https://github.com/dwg678&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;董先森&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

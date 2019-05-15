@@ -1,18 +1,16 @@
 +++
-title = "About Hugo"
+title = "about"
 date = "2014-04-09"
-menu = "main"
+
 +++
 
-Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+**关于 董先森**. 
 
-It makes use of a variety of open source projects including:
+四川巴中人、90后标准屌丝。 2017年，一时脑抽筋。在成都的某所民办大专里学习了注定成为屌丝的专业——软件技术。:
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+**关于博客**
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+本人不精通吃喝嫖赌，不懂得生活，就是喜欢乱折腾点东西，但总是折腾得半桶水。 脑子有限，仅能把一些信息放在这里借宿。
+
+Learn more  on [董先森](https://github.com/dwg678).
 

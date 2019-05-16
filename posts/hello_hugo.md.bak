@@ -1,0 +1,61 @@
+---
+title: "Hello_hugo"
+date: 2019-05-16T11:27:34+08:00
+tags: ["hugo", "blog","git"]
+categories: ["Releases"]
+draft: true
+---
+Hello, Hugo
+
+**#安装**
+
+使用 Homebrew 安装.(如果还没有安装Homebrew，参考：这里)
+
+```css
+brew install hugo
+```
+**#新建站点**
+
+直接在 Home 目录生成Blog 站点。
+```css
+hugo new site ~/Blog
+```
+使用上述命令会在当前用户目录下面生成一个Blog 站点，打开后看到如下图的站点目录结构
+```css
+Blog
+├── archetypes
+├── config.yaml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+```
+一共六个文件夹，外加一个全局配置文件config.yaml（类似 hexo 的_config.yml），各个文件夹的作用如下：
+
+##archetypes：给不同的类型定义默认FrontMatter，
+
+content：源文件，相当于 hexo 的 source 目录
+
+data：数据文件，一般用不上
+
+layouts：模板
+
+static：静态资源，也就是不需要Hugo处理的静态资源，比如图片等
+
+themes：第三方主题，将第三方主题拷贝到这个文件夹下即可使用
+
+比较常用的就是 content 和 themes ，一个存放内容，一个存放主题。可以直接将 hexo 中 source 目录下的 md 文件全拷贝到content目录。 同时将图片资源文件拷贝到 static 目录。因为文章和目录结构都没有改变，所有文章里面的图片链接路径都不需要修改。如果之前的 Markdown 文件都使用了 Hexo 标准的 Front-matter，Hugo 支持 yaml、toml、json 三种格式的Front matter，像 title、date、categories、tags这样的字段，Hugo 也无缝支持。
+
+然后在官网选择一个主题拷贝到 themes 目录。然后修改config.yaml中 theme 为主题的目录名称，运行 hugo --server 在浏览器里打开： http://localhost:1313 即可。 目前我使用的主题是参考官网上的一些主题，差不多花了三个周末自制的一款主题。还有一些不太满意的地方，一些功能也直接代码写死了，没有提取成变量，不方便共享。慢慢完善后再考虑开源。
+
+总体来说，迁移的成本是很小的。修改一下主题之后就可以部署上线了。
+
+**#部署上线**
+
+同 Hexo 一样，hugo 也是生成全静态文件。
+```css
+hugo --gc --minify
+```
+使用上面的命令生成站点，然后直接将这些文件部署到服务器上即可。 同样也可以部署到 Github Pages。目前我是直接使用 rsync 命令同步到自己在阿里云的服务器上。服务端也换成了 Caddy，不再使用 Nginx，关于这点，后面再写篇博文。
+

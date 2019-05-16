@@ -6,38 +6,63 @@
     <description>Recent content in Posts on 董先森博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 May 2019 14:07:04 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2019 11:27:34 +0800</lastBuildDate>
     
 	<atom:link href="https://dwg678.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Hello_hugo</title>
+      <link>https://dwg678.github.io/2019/hello_hugo/</link>
+      <pubDate>Thu, 16 May 2019 11:27:34 +0800</pubDate>
+      
+      <guid>https://dwg678.github.io/2019/hello_hugo/</guid>
+      <description>Hello, Hugo
+#安装
+使用 Homebrew 安装.(如果还没有安装Homebrew，参考：这里)
+brew install hugo  #新建站点
+直接在 Home 目录生成Blog 站点。
+hugo new site ~/Blog  使用上述命令会在当前用户目录下面生成一个Blog 站点，打开后看到如下图的站点目录结构
+Blog ├── archetypes ├── config.yaml ├── content ├── data ├── layouts ├── static └── themes  一共六个文件夹，外加一个全局配置文件config.yaml（类似 hexo 的_config.yml），各个文件夹的作用如下：
+archetypes：给不同的类型定义默认FrontMatter，
+content：源文件，相当于 hexo 的 source 目录
+data：数据文件，一般用不上
+layouts：模板
+static：静态资源，也就是不需要Hugo处理的静态资源，比如图片等
+themes：第三方主题，将第三方主题拷贝到这个文件夹下即可使用
+比较常用的就是 content 和 themes ，一个存放内容，一个存放主题。可以直接将 hexo 中 source 目录下的 md 文件全拷贝到content目录。 同时将图片资源文件拷贝到 static 目录。因为文章和目录结构都没有改变，所有文章里面的图片链接路径都不需要修改。如果之前的 Markdown 文件都使用了 Hexo 标准的 Front-matter，Hugo 支持 yaml、toml、json 三种格式的Front matter，像 title、date、categories、tags这样的字段，Hugo 也无缝支持。</description>
+    </item>
+    
+    <item>
       <title>Windows下搭建Hugo博客</title>
       <link>https://dwg678.github.io/2019/blog/</link>
-      <pubDate>Wed, 15 May 2019 14:07:04 +0800</pubDate>
+      <pubDate>Thu, 16 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dwg678.github.io/2019/blog/</guid>
       <description>★内容参考B站Up主CodeSheep，视频地址：https://www.bilibili.com/video/av51574688 我整理了Windows下的操作方法，如下：
 1：在https://github.com/gohugoio/hugo/releases地址下找到Windows压缩文件下载，如下图你可以下载32或者64位的
-!|yukundio9527|(https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png )
-2:如何看hugo安装成没成功，打开cmd，输入hugo version，如图所示，则代表安装成功 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png)
-3：安装成功后，用Hugo还创建自己的博客，命令如下图所示：hugo new site myblog 注：myblog为文件夹名字名字 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png)
-3：输入dir，能看到文件夹已经创建好了，如图 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png)
-4：我们进入到myblog里面，可以看到如下内容 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png)
-5:下载设置主题，去https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图
-!|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png)
-6：这里我选择m10c，以他为例子，具体操作如图显示。注：前提一定要下git并且配置好！
-!|yukundio9527|(https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png )
-7：主题下载成功如图 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png)
-8：去themes下，看看有没有，如图有啦 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png)
-9：启动博客命令，输入 hugo server -t m10c &amp;ndash;buildDrafts !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png)
-10：如图所示，出来了 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png)
-11：接下来就是创建文章，我们继续在根目录下创建，如图 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png)
-12：那怎么写呢，推荐用VS Code来写，写完后记得保存！如图 !|yukundio9527|(https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png)
-13：然后再根目录下输入指令 hugo server -t m10c &amp;ndash;buildDrafts，如图 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png)
-14：再打开http://localhost:1313，如图 !|yukundio9527|( https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png)
-15：把博客部署的远端github上，首先创建仓库，如图 !|yukundio9527|(https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png )
-16：仓库已经有了，但是个空仓库，接下来敲命令hugo &amp;ndash;theme=m10c &amp;ndash;baseUrl=&amp;ldquo;地址&amp;rdquo; &amp;ndash;buildDrafts，如图 !|yukundio9527|(https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png )</description>
+featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png
+2:如何看hugo安装成没成功，打开cmd，输入hugo version，如图所示，则代表安装成功 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png
+3：安装成功后，用Hugo还创建自己的博客，命令如下图所示：hugo new site myblog 注：myblog为文件夹名字名字 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png
+3：输入dir，能看到文件夹已经创建好了，如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png
+4：我们进入到myblog里面，可以看到如下内容 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png
+5:下载设置主题，去https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png
+6：这里我选择m10c，以他为例子，具体操作如图显示。注：前提一定要下git并且配置好！ featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png
+7：主题下载成功如图 featured_image: https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png
+8：去themes下，看看有没有，如图有啦 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png
+9：启动博客命令，输入 hugo server -t m10c &amp;ndash;buildDrafts featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png
+10：如图所示，出来了 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png
+11：接下来就是创建文章，我们继续在根目录下创建，如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png
+12：那怎么写呢，推荐用VS Code来写，写完后记得保存！如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png
+13：然后再根目录下输入指令 hugo server -t m10c &amp;ndash;buildDrafts，如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png
+14：再打开http://localhost:1313，如图 featured_image: https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png
+15：把博客部署的远端github上，首先创建仓库，如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png
+16：仓库已经有了，但是个空仓库，接下来敲命令hugo &amp;ndash;theme=m10c &amp;ndash;baseUrl=&amp;ldquo;地址&amp;rdquo; &amp;ndash;buildDrafts，如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png
+17：成功后会在根目录下生成一个public文件，如图 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513120058123-157282331.png
+18：把这个public传到github仓库上，首先进入到public，如图所示，已经把文件加到了仓库里面 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131616264-757767342.png
+17：要把本地public和远程github进行关联 featured_image:https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131952890-741412180.png
+18：然后还有个push命令，git push -u origin master，期间会让你输入账号密码，输入即可，如图完成 !|yukundio9527|(https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132636901-1344078191.png
+19：我们刷新下github页面，就会看到文件已经传上来了，如图 !</description>
     </item>
     
     <item>

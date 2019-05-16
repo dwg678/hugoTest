@@ -5,13 +5,78 @@
     <description>Recent content in 董先森博客 on 董先森博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 May 2019 14:07:04 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2019 11:27:34 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello_hugo</title>
+      <link>https://dwg678.github.io/2019/hello_hugo/</link>
+      <pubDate>Thu, 16 May 2019 11:27:34 +0800</pubDate>
+      
+      <guid>https://dwg678.github.io/2019/hello_hugo/</guid>
+      <description>&lt;p&gt;Hello, Hugo&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#安装&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;使用 Homebrew 安装.(如果还没有安装Homebrew，参考：这里)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;#新建站点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;直接在 Home 目录生成Blog 站点。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;hugo new site ~/Blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用上述命令会在当前用户目录下面生成一个Blog 站点，打开后看到如下图的站点目录结构&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;Blog
+├── archetypes
+├── config.yaml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;一共六个文件夹，外加一个全局配置文件config.yaml（类似 hexo 的_config.yml），各个文件夹的作用如下：&lt;/p&gt;
+
+&lt;p&gt;archetypes：给不同的类型定义默认FrontMatter，&lt;/p&gt;
+
+&lt;p&gt;content：源文件，相当于 hexo 的 source 目录&lt;/p&gt;
+
+&lt;p&gt;data：数据文件，一般用不上&lt;/p&gt;
+
+&lt;p&gt;layouts：模板&lt;/p&gt;
+
+&lt;p&gt;static：静态资源，也就是不需要Hugo处理的静态资源，比如图片等&lt;/p&gt;
+
+&lt;p&gt;themes：第三方主题，将第三方主题拷贝到这个文件夹下即可使用&lt;/p&gt;
+
+&lt;p&gt;比较常用的就是 content 和 themes ，一个存放内容，一个存放主题。可以直接将 hexo 中 source 目录下的 md 文件全拷贝到content目录。 同时将图片资源文件拷贝到 static 目录。因为文章和目录结构都没有改变，所有文章里面的图片链接路径都不需要修改。如果之前的 Markdown 文件都使用了 Hexo 标准的 Front-matter，Hugo 支持 yaml、toml、json 三种格式的Front matter，像 title、date、categories、tags这样的字段，Hugo 也无缝支持。&lt;/p&gt;
+
+&lt;p&gt;然后在官网选择一个主题拷贝到 themes 目录。然后修改config.yaml中 theme 为主题的目录名称，运行 hugo &amp;ndash;server 在浏览器里打开： &lt;a href=&#34;http://localhost:1313&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://localhost:1313&lt;/a&gt; 即可。 目前我使用的主题是参考官网上的一些主题，差不多花了三个周末自制的一款主题。还有一些不太满意的地方，一些功能也直接代码写死了，没有提取成变量，不方便共享。慢慢完善后再考虑开源。&lt;/p&gt;
+
+&lt;p&gt;总体来说，迁移的成本是很小的。修改一下主题之后就可以部署上线了。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;#部署上线&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;同 Hexo 一样，hugo 也是生成全静态文件。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;hugo --gc --minify
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用上面的命令生成站点，然后直接将这些文件部署到服务器上即可。 同样也可以部署到 Github Pages。目前我是直接使用 rsync 命令同步到自己在阿里云的服务器上。服务端也换成了 Caddy，不再使用 Nginx，关于这点，后面再写篇博文。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Windows下搭建Hugo博客</title>
       <link>https://dwg678.github.io/2019/blog/</link>
-      <pubDate>Wed, 15 May 2019 14:07:04 +0800</pubDate>
+      <pubDate>Thu, 16 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dwg678.github.io/2019/blog/</guid>
       <description>&lt;p&gt;★内容参考B站Up主CodeSheep，视频地址：&lt;a href=&#34;https://www.bilibili.com/video/av51574688&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.bilibili.com/video/av51574688&lt;/a&gt;
@@ -19,78 +84,76 @@
 
 &lt;p&gt;1：在&lt;a href=&#34;https://github.com/gohugoio/hugo/releases地址下找到Windows压缩文件下载，如下图你可以下载32或者64位的&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/gohugoio/hugo/releases地址下找到Windows压缩文件下载，如下图你可以下载32或者64位的&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513103543080-42645007.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;2:如何看hugo安装成没成功，打开cmd，输入hugo version，如图所示，则代表安装成功
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104311337-59247151.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;3：安装成功后，用Hugo还创建自己的博客，命令如下图所示：hugo new site myblog  注：myblog为文件夹名字名字
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104400669-308164512.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;3：输入dir，能看到文件夹已经创建好了，如图
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513104746195-1847106720.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;4：我们进入到myblog里面，可以看到如下内容
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105110070-410624344.png&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;5:下载设置主题，去&lt;a href=&#34;https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;5:下载设置主题，去&lt;a href=&#34;https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://themes.gohugo.io/选择自己喜欢的主题进行下载，如图&lt;/a&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105411063-698289161.png&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;6：这里我选择m10c，以他为例子，具体操作如图显示。注：前提一定要下git并且配置好！&lt;/p&gt;
-
-&lt;p&gt;!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;6：这里我选择m10c，以他为例子，具体操作如图显示。注：前提一定要下git并且配置好！
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513105733247-1170336546.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;7：主题下载成功如图
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png&lt;/a&gt;)&lt;/p&gt;
+featured_image: &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110131643-1221757335.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;8：去themes下，看看有没有，如图有啦
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110358274-876342732.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;9：启动博客命令，输入 hugo server -t m10c &amp;ndash;buildDrafts
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110652873-1708790104.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;10：如图所示，出来了
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513110844450-463620106.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;11：接下来就是创建文章，我们继续在根目录下创建，如图
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513111404737-367248422.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;12：那怎么写呢，推荐用VS Code来写，写完后记得保存！如图
-!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113621727-277941586.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;13：然后再根目录下输入指令 hugo server -t m10c &amp;ndash;buildDrafts，如图
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513112328506-2027514860.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;14：再打开&lt;a href=&#34;http://localhost:1313，如图&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;http://localhost:1313，如图&lt;/a&gt;
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png&lt;/a&gt;)&lt;/p&gt;
+featured_image: &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513113807091-839861697.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;15：把博客部署的远端github上，首先创建仓库，如图
-!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png&lt;/a&gt; )&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115447195-446798861.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;16：仓库已经有了，但是个空仓库，接下来敲命令hugo &amp;ndash;theme=m10c &amp;ndash;baseUrl=&amp;ldquo;地址&amp;rdquo; &amp;ndash;buildDrafts，如图
-!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png&lt;/a&gt; )&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513115904234-1855386864.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;17：成功后会在根目录下生成一个public文件，如图
-!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513120058123-157282331.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513120058123-157282331.png&lt;/a&gt; )&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513120058123-157282331.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513120058123-157282331.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;18：把这个public传到github仓库上，首先进入到public，如图所示，已经把文件加到了仓库里面
-!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131616264-757767342.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131616264-757767342.png&lt;/a&gt; )&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131616264-757767342.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131616264-757767342.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;17：要把本地public和远程github进行关联
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131952890-741412180.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131952890-741412180.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131952890-741412180.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513131952890-741412180.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;18：然后还有个push命令，git push -u origin master，期间会让你输入账号密码，输入即可，如图完成
-!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132636901-1344078191.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132636901-1344078191.png&lt;/a&gt; )&lt;/p&gt;
+!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132636901-1344078191.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132636901-1344078191.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;19：我们刷新下github页面，就会看到文件已经传上来了，如图
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132907679-993295920.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132907679-993295920.png&lt;/a&gt;)&lt;/p&gt;
+!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132907679-993295920.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513132907679-993295920.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;20：最后，我们拿仓库地址访问下，成功，博客已经部署到远端！如图。
-!|yukundio9527|( &lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133102657-1278645314.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133102657-1278645314.png&lt;/a&gt;)&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133102657-1278645314.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133102657-1278645314.png&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;21：里面的内容也是可以访问的，如图
-!|yukundio9527|(&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133221455-1454359954.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133221455-1454359954.png&lt;/a&gt; )&lt;/p&gt;
+featured_image:&lt;a href=&#34;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133221455-1454359954.png&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://img2018.cnblogs.com/blog/1033328/201905/1033328-20190513133221455-1454359954.png&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -2265,183 +2328,6 @@ Having nearly instant feedback enables you to have your creativity flow without 
 &lt;h2 id=&#34;step-4-have-fun&#34;&gt;Step 4. Have fun&lt;/h2&gt;
 
 &lt;p&gt;The best way to learn something is to play with it.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://dwg678.github.io/2014/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://dwg678.github.io/2014/migrate-from-jekyll/</guid>
-      <description>
-
-&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
-With Jekyll, something that looked like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
-    ▾ images/
-        logo.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;should become&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
-    ▾ static/
-        ▾ images/
-            logo.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code&gt;CNAME&lt;/code&gt;) to be moved to &lt;code&gt;static&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;create-your-hugo-configuration-file&#34;&gt;Create your Hugo configuration file&lt;/h2&gt;
-
-&lt;p&gt;Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the &lt;a href=&#34;https://dwg678.github.io/overview/configuration/&#34;&gt;Hugo configuration documentation&lt;/a&gt; for details.&lt;/p&gt;
-
-&lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;The default is for Jekyll to publish to &lt;code&gt;_site&lt;/code&gt; and for Hugo to publish to &lt;code&gt;public&lt;/code&gt;. If, like me, you have &lt;a href=&#34;http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;_site&lt;/code&gt; mapped to a git submodule on the &lt;code&gt;gh-pages&lt;/code&gt; branch&lt;/a&gt;, you&amp;rsquo;ll want to do one of two alternatives:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Change your submodule to point to map &lt;code&gt;gh-pages&lt;/code&gt; to public instead of &lt;code&gt;_site&lt;/code&gt; (recommended).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git submodule deinit _site
-git rm _site
-git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Or, change the Hugo configuration to use &lt;code&gt;_site&lt;/code&gt; instead of &lt;code&gt;public&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    ..
-    &amp;quot;publishdir&amp;quot;: &amp;quot;_site&amp;quot;,
-    ..
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;convert-jekyll-templates-to-hugo-templates&#34;&gt;Convert Jekyll templates to Hugo templates&lt;/h2&gt;
-
-&lt;p&gt;That&amp;rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to &lt;a href=&#34;http://jekyllrb.com/docs/templates/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Jekyll&amp;rsquo;s template documentation&lt;/a&gt; if you need to refresh your memory on how you built your blog and &lt;a href=&#34;https://dwg678.github.io/layout/templates/&#34;&gt;Hugo&amp;rsquo;s template&lt;/a&gt; to learn Hugo&amp;rsquo;s way.&lt;/p&gt;
-
-&lt;p&gt;As a single reference data point, converting my templates for &lt;a href=&#34;http://heyitsalex.net/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;heyitsalex.net&lt;/a&gt; took me no more than a few hours.&lt;/p&gt;
-
-&lt;h2 id=&#34;convert-jekyll-plugins-to-hugo-shortcodes&#34;&gt;Convert Jekyll plugins to Hugo shortcodes&lt;/h2&gt;
-
-&lt;p&gt;Jekyll has &lt;a href=&#34;http://jekyllrb.com/docs/plugins/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;plugins&lt;/a&gt;; Hugo has &lt;a href=&#34;https://dwg678.github.io/doc/shortcodes/&#34;&gt;shortcodes&lt;/a&gt;. It&amp;rsquo;s fairly trivial to do a port.&lt;/p&gt;
-
-&lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
-
-&lt;p&gt;As an example, I was using a custom &lt;a href=&#34;https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;image_tag&lt;/code&gt;&lt;/a&gt; plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.&lt;/p&gt;
-
-&lt;p&gt;Jekyll&amp;rsquo;s plugin:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;module Jekyll
-  class ImageTag &amp;lt; Liquid::Tag
-    @url = nil
-    @caption = nil
-    @class = nil
-    @link = nil
-    // Patterns
-    IMAGE_URL_WITH_CLASS_AND_CAPTION =
-    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&amp;quot;(.*?)&amp;quot;(\s+)-&amp;gt;((https?:\/\/|\/)(\S+))(\s*)/i
-    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&amp;quot;(.*?)&amp;quot;/i
-    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
-    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
-    def initialize(tag_name, markup, tokens)
-      super
-      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
-        @class   = $1
-        @url     = $3
-        @caption = $7
-        @link = $9
-      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
-        @class   = $1
-        @url     = $3
-        @caption = $7
-      elsif markup =~ IMAGE_URL_WITH_CAPTION
-        @url     = $1
-        @caption = $5
-      elsif markup =~ IMAGE_URL_WITH_CLASS
-        @class = $1
-        @url   = $3
-      elsif markup =~ IMAGE_URL
-        @url = $1
-      end
-    end
-    def render(context)
-      if @class
-        source = &amp;quot;&amp;lt;figure class=&#39;#{@class}&#39;&amp;gt;&amp;quot;
-      else
-        source = &amp;quot;&amp;lt;figure&amp;gt;&amp;quot;
-      end
-      if @link
-        source += &amp;quot;&amp;lt;a href=\&amp;quot;#{@link}\&amp;quot;&amp;gt;&amp;quot;
-      end
-      source += &amp;quot;&amp;lt;img src=\&amp;quot;#{@url}\&amp;quot;&amp;gt;&amp;quot;
-      if @link
-        source += &amp;quot;&amp;lt;/a&amp;gt;&amp;quot;
-      end
-      source += &amp;quot;&amp;lt;figcaption&amp;gt;#{@caption}&amp;lt;/figcaption&amp;gt;&amp;quot; if @caption
-      source += &amp;quot;&amp;lt;/figure&amp;gt;&amp;quot;
-      source
-    end
-  end
-end
-Liquid::Template.register_tag(&#39;image&#39;, Jekyll::ImageTag)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;is written as this Hugo shortcode:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- image --&amp;gt;
-&amp;lt;figure {{ with .Get &amp;quot;class&amp;quot; }}class=&amp;quot;{{.}}&amp;quot;{{ end }}&amp;gt;
-    {{ with .Get &amp;quot;link&amp;quot;}}&amp;lt;a href=&amp;quot;{{.}}&amp;quot;&amp;gt;{{ end }}
-        &amp;lt;img src=&amp;quot;{{ .Get &amp;quot;src&amp;quot; }}&amp;quot; {{ if or (.Get &amp;quot;alt&amp;quot;) (.Get &amp;quot;caption&amp;quot;) }}alt=&amp;quot;{{ with .Get &amp;quot;alt&amp;quot;}}{{.}}{{else}}{{ .Get &amp;quot;caption&amp;quot; }}{{ end }}&amp;quot;{{ end }} /&amp;gt;
-    {{ if .Get &amp;quot;link&amp;quot;}}&amp;lt;/a&amp;gt;{{ end }}
-    {{ if or (or (.Get &amp;quot;title&amp;quot;) (.Get &amp;quot;caption&amp;quot;)) (.Get &amp;quot;attr&amp;quot;)}}
-    &amp;lt;figcaption&amp;gt;{{ if isset .Params &amp;quot;title&amp;quot; }}
-        {{ .Get &amp;quot;title&amp;quot; }}{{ end }}
-        {{ if or (.Get &amp;quot;caption&amp;quot;) (.Get &amp;quot;attr&amp;quot;)}}&amp;lt;p&amp;gt;
-        {{ .Get &amp;quot;caption&amp;quot; }}
-        {{ with .Get &amp;quot;attrlink&amp;quot;}}&amp;lt;a href=&amp;quot;{{.}}&amp;quot;&amp;gt; {{ end }}
-            {{ .Get &amp;quot;attr&amp;quot; }}
-        {{ if .Get &amp;quot;attrlink&amp;quot;}}&amp;lt;/a&amp;gt; {{ end }}
-        &amp;lt;/p&amp;gt; {{ end }}
-    &amp;lt;/figcaption&amp;gt;
-    {{ end }}
-&amp;lt;/figure&amp;gt;
-&amp;lt;!-- image --&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;p&gt;I simply changed:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &amp;quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &amp;quot;having fun&amp;quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&amp;quot; -&amp;gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to this (this example uses a slightly extended version named &lt;code&gt;fig&lt;/code&gt;, different than the built-in &lt;code&gt;figure&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{% fig class=&amp;quot;full&amp;quot; src=&amp;quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&amp;quot; title=&amp;quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&amp;quot; link=&amp;quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&amp;quot; %}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As a bonus, the shortcode named parameters are, arguably, more readable.&lt;/p&gt;
-
-&lt;h2 id=&#34;finishing-touches&#34;&gt;Finishing touches&lt;/h2&gt;
-
-&lt;h3 id=&#34;fix-content&#34;&gt;Fix content&lt;/h3&gt;
-
-&lt;p&gt;Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that &lt;code&gt;hugo server --watch&lt;/code&gt; is your friend. Test your changes and fix errors as needed.&lt;/p&gt;
-
-&lt;h3 id=&#34;clean-up&#34;&gt;Clean up&lt;/h3&gt;
-
-&lt;p&gt;You&amp;rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&amp;rsquo;t used, delete it.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-practical-example-in-a-diff&#34;&gt;A practical example in a diff&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://heyitsalex.net/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hey, it&amp;rsquo;s Alex&lt;/a&gt; was migrated in less than a &lt;em&gt;father-with-kids day&lt;/em&gt; from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this &lt;a href=&#34;https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;diff&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

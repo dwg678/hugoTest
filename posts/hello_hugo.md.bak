@@ -33,7 +33,7 @@ Blog
 ```
 一共六个文件夹，外加一个全局配置文件config.yaml（类似 hexo 的_config.yml），各个文件夹的作用如下：
 
-##archetypes：给不同的类型定义默认FrontMatter，
+archetypes：给不同的类型定义默认FrontMatter，
 
 content：源文件，相当于 hexo 的 source 目录
 

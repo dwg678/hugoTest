@@ -24,13 +24,13 @@ brew install hugo  #新建站点
 直接在 Home 目录生成Blog 站点。
 hugo new site ~/Blog  使用上述命令会在当前用户目录下面生成一个Blog 站点，打开后看到如下图的站点目录结构
 Blog ├── archetypes ├── config.yaml ├── content ├── data ├── layouts ├── static └── themes  一共六个文件夹，外加一个全局配置文件config.yaml（类似 hexo 的_config.yml），各个文件夹的作用如下：
-archetypes：给不同的类型定义默认FrontMatter，
-content：源文件，相当于 hexo 的 source 目录
-data：数据文件，一般用不上
-layouts：模板
-static：静态资源，也就是不需要Hugo处理的静态资源，比如图片等
-themes：第三方主题，将第三方主题拷贝到这个文件夹下即可使用
-比较常用的就是 content 和 themes ，一个存放内容，一个存放主题。可以直接将 hexo 中 source 目录下的 md 文件全拷贝到content目录。 同时将图片资源文件拷贝到 static 目录。因为文章和目录结构都没有改变，所有文章里面的图片链接路径都不需要修改。如果之前的 Markdown 文件都使用了 Hexo 标准的 Front-matter，Hugo 支持 yaml、toml、json 三种格式的Front matter，像 title、date、categories、tags这样的字段，Hugo 也无缝支持。</description>
+ archetypes：给不同的类型定义默认FrontMatter，
+ content：源文件，相当于 hexo 的 source 目录
+ data：数据文件，一般用不上
+ layouts：模板
+ static：静态资源，也就是不需要Hugo处理的静态资源，比如图片等
+ themes：第三方主题，将第三方主题拷贝到这个文件夹下即可使用
+  比较常用的就是 content 和 themes ，一个存放内容，一个存放主题。可以直接将 hexo 中 source 目录下的 md 文件全拷贝到content目录。 同时将图片资源文件拷贝到 static 目录。因为文章和目录结构都没有改变，所有文章里面的图片链接路径都不需要修改。如果之前的 Markdown 文件都使用了 Hexo 标准的 Front-matter，Hugo 支持 yaml、toml、json 三种格式的Front matter，像 title、date、categories、tags这样的字段，Hugo 也无缝支持。</description>
     </item>
     
     <item>

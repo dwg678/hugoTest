@@ -1,0 +1,21 @@
+---
+title: "Mybatis"
+date: 2019-05-22T19:33:02+08:00
+tags: ["hugo", "blog","git"]
+categories: ["Releases"]
+draft: true
+---
+
+**安装**
+
+需要使用Mybatis，只需要将Mybatis-x.x.x.jar文件至于classpath中即可。
+如果使用maven来构建项目，则需要将下面的dependency代码至于pom.xml文件中：
+
+
+```xml
+<dependency>
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis</artifactId>
+	<version>x.x.x</version>
+</dependency>
+```

@@ -6,10 +6,22 @@
     <description>Recent content in Releases on 董先森的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2019 14:36:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 19:33:02 +0800</lastBuildDate>
     
 	<atom:link href="https://dwg678.github.io/categories/releases/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mybatis</title>
+      <link>https://dwg678.github.io/2019/mybatis/</link>
+      <pubDate>Wed, 22 May 2019 19:33:02 +0800</pubDate>
+      
+      <guid>https://dwg678.github.io/2019/mybatis/</guid>
+      <description>安装
+需要使用Mybatis，只需要将Mybatis-x.x.x.jar文件至于classpath中即可。 如果使用maven来构建项目，则需要将下面的dependency代码至于pom.xml文件中：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;x.x.x&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  从XML中构建SqlSessionFactory
+每个</description>
+    </item>
     
     <item>
       <title>了解MVC设计模式</title>
